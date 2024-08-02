@@ -52,14 +52,12 @@ function Item({item, navigation}: ItemProps): React.JSX.Element {
       key={item.id}
       onPress={() => navigation.navigate('Profile', {data: item})}>
       <View style={{flex: 1, flexDirection: 'row'}}>
-        {/* <Text style={{fontWeight: 900}}>{item.albumId} - </Text> */}
         <Image
           source={{uri: item.thumbnailUrl}}
           style={{width: 50, height: 50, marginRight: 10, borderRadius: 100}}
         />
         <Text>{item.title}</Text>
       </View>
-      {/* {item.completed ? <Text>✅</Text> : <Text>❌</Text>} */}
     </TouchableOpacity>
   );
 }
